@@ -40,19 +40,14 @@ roll one more or one less 6.
 
 Below is a table of probabilities from the binomial distribution:
 
-``` r
-read.csv("PP2outcomes.csv", fill = FALSE, nrow = 8)
-```
-
-    ##   X...6 Probability  X X.1 X.2 X.3 X.4 X.5 X.6 X.7 X.8 X.9
-    ## 1     2      0.0732 NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
-    ## 2     3      0.1368 NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
-    ## 3     4      0.1847 NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
-    ## 4     5      0.1921 NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
-    ## 5     6      0.1601 NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
-    ## 6     7      0.1098 NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
-    ## 7     8      0.0632 NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
-    ## 8    NA          NA NA  NA  NA  NA  NA  NA  NA  NA  NA  NA
+    ##   X...6 Probability
+    ## 1     2      0.0732
+    ## 2     3      0.1368
+    ## 3     4      0.1847
+    ## 4     5      0.1921
+    ## 5     6      0.1601
+    ## 6     7      0.1098
+    ## 7     8      0.0632
 
 As with one more or less, rolling a 6 on 2 more or 2 less occasions sits
 within 1 standard deviation of the mean, so it is not particularly

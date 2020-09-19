@@ -28,8 +28,8 @@ Our sample size and probability of success is large enough to let us approximate
 
 Below is a table of probabilities from the binomial distribution:
 
-```{r PP2}
-read.csv("PP2outcomes.csv", header = TRUE, strip.white = TRUE, fill = FALSE, nrow = 7)
+```{r PP2, echo=FALSE}
+read.csv("PP2outcomes.csv", header = TRUE, strip.white = TRUE, fill = FALSE, nrow = 7)[,1:2]
 ```
 
 As with one more or less, rolling a 6 on 2 more or 2 less occasions sits within 1 standard deviation of the mean, so it is not particularly unusual. We would expect approximately 68% of our samples to produce a 6 on 3, 4, 5, 6 or 7 occasions. Rolling a 6 three more or less times is less common - a 6 occurring twice or 8 times are approximately 1.47 standard deviations from the mean of 5.
