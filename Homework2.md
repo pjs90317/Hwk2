@@ -82,3 +82,10 @@ normal distribution. Our E(X=6) = 16.667. We take the critical z-score
 of alpha = 0.2, multiply by the sampling standard deviation and then add
 and subtract from out mean: 16.667 +/- 0.476. Our fair die would produce
 a 6 between 16.191 and 17.143 occasions, 80% of the time.
+
+While the sample size is sufficiently large, focusing solely on one
+outcome, rolling a 6, is too myopic to truly determine whether the die
+is fair or not. If the die was weighted to another number, rolling a 6
+may still occur enough times to satisfy the protocol yet we remain
+ignorant to the fact that other numbers may be occurring at
+statistically significantly high rates.
