@@ -1,5 +1,6 @@
 Homework 2
 ================
+Patrick Sinclair
 
 ### Experiment Protocol Analysis
 
@@ -10,33 +11,23 @@ Roll die once, if \(X = 6\), then conclude the die is unfair. If
 \(X = 1, 2, 3, 4, 5\), then conclude the die is fair.
 
 With such a small sample, the probability that we would determine what
-is actually a fair die to be unfair is \(1/6\). Conversely, if the die
-were unfair, the probability that we would deem it to be fair is ( \<
-5/6). Given that the unfair die is weighted to roll a 6 more than 1/6
-times, the numbers 1 to 5 would be rolled less than 5/6 times. Depending
-on the weightedness of the die, that probability could even be zero.
+is actually a fair die to be unfair is (1/6). Conversely, if the die
+were unfair, the probability that we would deem it to be fair is \< 5/6.
+Depending on the weightedness of the die, that probability could even be
+zero.
 
 *PP2*  
 Roll die 30 times.
 
-Decision Rule: The expected number of outcomes where (x = 6) is the
-probability of rolling a 6 times the number of trials. 1/6 \* 30 = 5. If
-we observe 6 approximately 5 times, we can conclude that the die is
-fair.
+Decision Rule: E(X = 6) = 1/6 \* 30 = 5. If we observe 6 approximately
+five times, we can conclude that the die is fair.
 
-Were we to roll a fair die, we would expect to observe a 6 on 5
+Were we to roll a fair die, we would expect to observe a 6 on five
 occasions. We can approach the problem using a binomial distribution -
 we either observe a 6, classified as a success, or we do not observe a
-6, a failure. We would expect to roll a 6 on 5 occasions 19.2% of the
-time. Rolling one more or one less 6 would occur 16% and 18.5% of the
-time, respectively.
-
-Our sample size and probability of success is large enough to let us
-approximate the binomial using the normal distribution. Accounting for
-the continuity correction, the probability of rolling a 6 on 4 or 6
-occasions is 17.2%, each. Rolling a 6 from 4 to 6 times would occur
-37.6% of the time. I conclude that it is not particularly unusual to
-roll one more or one less 6.
+6, a failure. We would expect to roll a 6 on five occasions 19.211% of
+the time. Rolling one more or one less 6 would occur 18.468% and 16.013%
+of the time, respectively.
 
 Below is a table of probabilities from the binomial distribution:
 
@@ -49,34 +40,45 @@ Below is a table of probabilities from the binomial distribution:
     ## 6     7      0.1098
     ## 7     8      0.0632
 
-As with one more or less, rolling a 6 on 2 more or 2 less occasions sits
-within 1 standard deviation of the mean, so it is not particularly
-unusual. We would expect approximately 68% of our samples to produce a 6
-on 3, 4, 5, 6 or 7 occasions. Rolling a 6 three more or less times is
-less common - a 6 occurring twice or 8 times are approximately 1.47
-standard deviations from the mean of 5.
+Our sample size and probability of success is large enough to let us
+approximate the binomial using the normal distribution. Rolling a 6 from
+four to six times would occur 37.6% of the time. I conclude that it is
+not particularly unusual to roll one more or one less 6.
 
-## Including Code
+As with one more or less, rolling a 6 on two more or two less occasions
+sits within 1 standard deviation of the mean. We would expect
+approximately 68% of our samples to produce a 6 on 3, 4, 5, 6 or 7
+occasions. These results are not particularly unusual. Rolling a 6 three
+more or less times is less common - a 6 occurring twice or eight times
+are approximately 1.47 standard deviations from the mean of five.
 
-You can include R code in the document as follows:
+###### Frequency Histogram of PP2 Experiement
 
-``` r
-summary(cars)
-```
+    ##  [1] 1 4 1 2 5 3 6 2 3 3 1 5 5 2 6 6 2 1 5 5 1 1 6 5 5 2 2 6 1 4
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+![](Homework2_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
-## Including Plots
+Referring back to our decision protocol, we determine that the die is
+fair, having produced a 6 on five occasions. If we have a fair die,
+using this protocol we have a 62.4% chance of mistakenly classing it as
+an unfair die.
 
-You can also embed plots, for example:
+*PP3*  
+Roll die 100 times.
 
-![](Homework2_files/figure-gfm/pressure-1.png)<!-- -->
+Decision Rule: As above, E(X=6) = 1/6 \* 100 = 16.667. If we observe 6
+approximately seventeen times, we can conclude that the die is fair.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+Any conclusion we arrive at does require a level of confidence. Which
+level of confidence one should use depends on the context. Are we
+rolling to see who takes first turn at the annual family Monopoly
+showdown or are we involved in a high stakes craps game?
+
+Let’s assume we’re facing off against Uncle Joe after the turkey has
+been carved and we’re ok with a confidence level of 80%.
+
+Our sample size lets us approximate a binomial distribution using a
+normal distribution. Our E(X=6) = 16.667. We take the critical z-score
+of alpha = 0.2, multiply by the sampling standard deviation and then add
+and subtract from out mean: 16.667 +/- 0.476. Our fair die would produce
+a 6 between 16.191 and 17.143 occasions, 80% of the time.
