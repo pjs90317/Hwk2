@@ -1,0 +1,35 @@
+---
+title: "Homework 2"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Experiment Protocol Analysis
+
+**Possible Protocols**  
+
+*PP1*  
+Roll die once, if $X = 6$, then conclude the die is unfair. If $X != 6$, then conclude the die is fair.
+
+With such a small sample, the probability that we would determine what is actually a fair die to be unfair is $1/6$. Conversely, if the die were unfair, the probability that we would deem it to be fair is $ < 5/6$. Given that the unfair die is weighted to roll a 6 more than 1/6 times, the numbers 1-5 would be rolled less than 5/6 times. Depending on the weightedness of the die, that probability could even be zero.
+
+## Including Code
+
+You can include R code in the document as follows:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
